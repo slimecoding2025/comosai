@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0b0c1c, #1a1a40);
+    color: #fff;
+  ackground-size: cover;
+  background-position: center;
+
+}
+.footer-powered {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,40,0.7);
+  color: #9ee9ff;
+  font-size: 1rem;
+}
+.footer-powered img {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(0, 15, 30, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #00ffff;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(0, 255, 255, 0.2);
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #00ffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff00ff;
+    transform: scale(1.1);
+}
+
+/* Background stars animation */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}

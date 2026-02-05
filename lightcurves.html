@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Light Curves 🌟 | COSMOS-AI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Light Curves 🌟</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="exoplanets.html">Exoplanets</a>
+        <a href="lightcurves.html">Light Curves</a>
+        <a href="gwaves.html">Gravitational Waves</a>
+        <a href="rag.html">RAG</a>
+        <a href="predictive.html">Predictive AI</a>
+    </nav>
+
+    <div id="lightcurve-plot" style="width:90%;height:500px;margin: 20px auto;"></div>
+
+    <script>
+        const data = [{
+            x: Array.from({length: 100}, (_, i) => i),
+            y: Array.from({length: 100}, () => 1 + Math.random()*0.2),
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'Star 1'
+        }];
+
+        const layout = {
+            title: 'Simulated Light Curve',
+            xaxis: { title: 'Time (days)' },
+            yaxis: { title: 'Brightness (relative)' },
+            plot_bgcolor: '#0b0c1c',
+            paper_bgcolor: '#0b0c1c',
+            font: { color: '#00ffff' }
+        };
+
+        Plotly.newPlot('lightcurve-plot', data, layout);
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

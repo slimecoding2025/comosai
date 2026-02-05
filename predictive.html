@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predictive AI 🤖 | COSMOS-AI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Predictive AI 🌠</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="exoplanets.html">Exoplanets</a>
+        <a href="lightcurves.html">Light Curves</a>
+        <a href="gwaves.html">Gravitational Waves</a>
+        <a href="rag.html">RAG</a>
+    </nav>
+
+    <div style="text-align:center;margin-top:40px;">
+        <input id="planet-name" type="text" placeholder="Enter a planet name..." style="width:50%;padding:10px;">
+        <button onclick="predictPlanet()">Predict</button>
+        <p id="prediction" style="margin-top:20px;color:#00ffff;"></p>
+    </div>
+
+    <script>
+        function predictPlanet() {
+            const name = document.getElementById('planet-name').value;
+            const mass = (Math.random()*10).toFixed(2);
+            const radius = (Math.random()*2).toFixed(2);
+            const period = (Math.random()*365).toFixed(1);
+            document.getElementById('prediction').innerText = 
+                `Predicted properties for ${name}: Mass=${mass} M⊕, Radius=${radius} R⊕, Orbital Period=${period} days.`;
+        }
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

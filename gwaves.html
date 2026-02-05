@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gravitational Waves 🌊 | COSMOS-AI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Gravitational Waves 🌊</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="exoplanets.html">Exoplanets</a>
+        <a href="lightcurves.html">Light Curves</a>
+        <a href="rag.html">RAG</a>
+        <a href="predictive.html">Predictive AI</a>
+    </nav>
+
+    <div id="gwaves-plot" style="width:90%;height:500px;margin: 20px auto;"></div>
+
+    <script>
+        // بيانات وهمية لموجات الجاذبية
+        const data = [{
+            x: Array.from({length: 100}, (_, i) => i/10),
+            y: Array.from({length: 100}, (_, i) => Math.sin(i/5) + Math.random()*0.1),
+            type: 'scatter',
+            mode: 'lines',
+            name: 'GW Signal'
+        }];
+
+        const layout = {
+            title: 'Simulated Gravitational Wave Signal',
+            xaxis: { title: 'Time (s)' },
+            yaxis: { title: 'Strain' },
+            plot_bgcolor: '#0b0c1c',
+            paper_bgcolor: '#0b0c1c',
+            font: { color: '#00ffff' }
+        };
+
+        Plotly.newPlot('gwaves-plot', data, layout);
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

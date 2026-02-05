@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exoplanets 🌍 | COSMOS-AI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Exoplanets Data 🌍</h1>
+    <nav>
+     <a href="../index.html">Home</a>
+        <a href="lightcurves.html">Light Curves</a>
+        <a href="gwaves.html">Gravitational Waves</a>
+        <a href="rag.html">RAG</a>
+        <a href="predictive.html">Predictive AI</a>
+    </nav>
+
+    <table id="exoplanets-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mass (M⊕)</th>
+                <th>Radius (R⊕)</th>
+                <th>Period (days)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        fetch("http://localhost:8000/exoplanets/?limit=50")
+        .then(res => res.json())
+        .then(data => {
+            const tbody = document.querySelector("#exoplanets-table tbody");
+            data.forEach(planet => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td>${planet.pl_name}</td>
+                                <td>${planet.pl_bmasse}</td>
+                                <td>${planet.pl_rade}</td>
+                                <td>${planet.pl_orbper}</td>`;
+                tbody.appendChild(tr);
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
